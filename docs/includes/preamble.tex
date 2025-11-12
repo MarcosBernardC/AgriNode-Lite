@@ -1,0 +1,101 @@
+% ==========================================================
+% 🧩 Preambulo principal de AgriNode-Lite (LuaLaTeX)
+% ==========================================================
+
+% Clase de documento: informe técnico base
+\documentclass[12pt,a4paper]{article}
+
+% ----------------------------------------------------------
+% Paquetes esenciales del motor LuaLaTeX
+% ----------------------------------------------------------
+\usepackage{fontspec}      % Fuentes del sistema
+\usepackage{microtype}     % Microtipografía avanzada
+\usepackage{xcolor}        % Colores
+\usepackage{graphicx}      % Imágenes
+\usepackage{geometry}      % Márgenes y dimensiones
+\usepackage{hyperref}      % Enlaces y referencias
+\usepackage{minted}        % Resaltado de código (requiere -shell-escape)
+\usepackage{fancyhdr}      % Encabezados y pies de página
+\usepackage{setspace}      % Espaciado entre líneas
+\usepackage[main=spanish,provide=*]{babel}  % Idioma español
+\usepackage{csquotes}      % Comillas tipográficas
+\usepackage{booktabs}      % Tablas profesionales
+\usepackage{siunitx}       % Unidades y notación científica
+
+% ----------------------------------------------------------
+% Configuración de página y formato
+% ----------------------------------------------------------
+\geometry{
+  a4paper,
+  top=2.5cm,
+  bottom=2.5cm,
+  left=2.5cm,
+  right=2.5cm
+}
+
+\setstretch{1.15}  % Interlineado agradable
+
+% ----------------------------------------------------------
+% Fuentes del sistema (recomendadas en Garuda Linux)
+% ----------------------------------------------------------
+% Para soporte completo Unicode y emoji 🌿
+\setmainfont{Noto Serif}
+\setsansfont{Noto Sans}
+\setmonofont{JetBrains Mono}
+
+% Fuente separada para emojis (usada en encabezados, etc.)
+\newfontfamily\emojifont{Noto Color Emoji}
+
+\fancyhead[L]{\textbf{AgriNode-Lite} \raisebox{-0.1em}{\emojifont 🌾}}
+
+
+% Ejemplo de cómo mezclar emoji dentro del texto o encabezado:
+% \fancyhead[L]{\textbf{AgriNode-Lite} \raisebox{-0.1em}{\emojifont 🌿}}
+
+
+% ----------------------------------------------------------
+% Colores y estilo de código fuente
+% ----------------------------------------------------------
+\definecolor{agrigreen}{HTML}{6CA36C}
+\definecolor{agricyan}{HTML}{00A8A8}
+\definecolor{agriorange}{HTML}{E69826}
+
+\setminted{
+  fontsize=\footnotesize,
+  frame=lines,
+  framesep=3pt,
+  bgcolor=gray!5,
+  breaklines,
+  tabsize=2,
+  linenos,
+  numbersep=6pt,
+  xleftmargin=1.5em,
+  style=friendly
+}
+
+% ----------------------------------------------------------
+% Enlaces e hipervínculos
+% ----------------------------------------------------------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=agrigreen,
+  urlcolor=agricyan,
+  citecolor=agriorange,
+  pdftitle={AgriNode-Lite - Informe Técnico},
+  pdfauthor={Bernard},
+  pdfsubject={Proyecto AgriNode-Lite - Fase 1},
+  pdfcreator={LuaLaTeX}
+}
+
+% ----------------------------------------------------------
+% Encabezado y pie de página
+% ----------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{AgriNode-Lite }}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+
+% ----------------------------------------------------------
+% Inicio del documento
+% ----------------------------------------------------------

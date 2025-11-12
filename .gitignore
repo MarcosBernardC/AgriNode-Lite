@@ -1,0 +1,27 @@
+# Archivos compilados
+*.aux
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.run.xml
+
+# Archivos PDF generados
+*.pdf
+
+# Minted y otros temporales
+_minted/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

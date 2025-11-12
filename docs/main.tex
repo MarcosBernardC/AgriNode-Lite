@@ -1,0 +1,41 @@
+\documentclass[12pt,a4paper]{article}
+
+% Soporte Unicode moderno
+\usepackage{fontspec}
+\usepackage[main=spanish,provide=*]{babel}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\geometry{margin=2.5cm}
+
+% ----------------------------------------------------------
+% Fuentes
+% ----------------------------------------------------------
+\setmainfont{Noto Serif}                % fuente principal
+\setsansfont{Noto Sans}                 % sans serif opcional
+\setmonofont{JetBrains Mono}            % monoespaciada
+\newfontfamily\emojifont{Noto Color Emoji}[Renderer=HarfBuzz]
+
+% Comando para emojis
+\newcommand{\emoji}[1]{{\emojifont #1}}
+
+% ----------------------------------------------------------
+% Información del documento
+% ----------------------------------------------------------
+\title{Documento con Emojis en LuaLaTeX}
+\author{Bernard}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introducción}
+Este documento usa emojis nativos de Linux \emoji{🌿} y fuentes Unicode completas.
+
+\section{Ejemplo}
+AgriNode-Lite está creciendo \emoji{🌱} y pronto florecerá \emoji{🌸}.
+
+\section{Notas}
+Compilado en Garuda Linux con LuaLaTeX y soporte de color emoji.
+
+\end{document}
